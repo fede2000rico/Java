@@ -5,4 +5,4 @@ The focus is to reach a good level in Java from 0 level. The program follows the
 # Index
   1. Helloworld
   2. Define a class with different variables
-    - Create and manage an array of objects
+     Create and manage an array of objects
