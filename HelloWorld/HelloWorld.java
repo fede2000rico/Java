@@ -1,3 +1,5 @@
+package HelloWorld;
+
 //First Java App: It prints Helloworld!
 //@author fede2
 
@@ -6,14 +8,17 @@
 public class HelloWorld {
 
     //main function declaration: static means that it's the same for every object in the code
-    public static void hello() {
+    public void hello() {
         //Printout defoult function
         System.out.println("ABX");
     }
 
+    //Main code
     public static void main(String[] args) {
-        hello();
+
+        HelloWorld s = new HelloWorld();
+        //Launch hello()
+        s.hello();
     }
 
 }
-
