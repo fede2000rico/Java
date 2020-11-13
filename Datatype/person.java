@@ -1,13 +1,16 @@
 package Datatype;
 
 public class person {
+    //Variables declaration
     private String name;
     private int age;
     private String gender;
     private boolean registered;
 
-    //Custom conpersonor
+    //Custom constructor
     public person(String name,int age, String gender, boolean reg){
+
+        //Set the variables
         this.name=name;
         this.age = age;
         this.gender=gender;
@@ -39,18 +42,14 @@ public class person {
     //#endregion
 
     public String toString(){
+
+        //Declare string
         String str;
 
+        //Set the string
         str= this.name+ ", " +this.age + ", " +this.gender + ", " +this.registered;
 
+        //Return edited string
         return str;
-    }
-
-
-    public static void main(String[] args) {
-        person person1 = new person("Federico",20,"Male",true);
-
-        System.out.println(person1.toString());
-
     }
 }
