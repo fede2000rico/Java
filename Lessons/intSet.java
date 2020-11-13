@@ -3,41 +3,44 @@ package Lessons;
 // @author fede2
 
 public class intSet{
-    private int[] numbers = new int[5];
-    private int current_pos;
+    //Variables definition
+    private int[] numbers;
+    private int currentpos;
 
-    public intSet(){
-        current_pos=0;
+    //Custom constructor
+    public intSet(int dimension){
+        numbers=new int[dimension];
+        currentpos=0;
     }
 
-    public void add(int new_item){
-        //Check if new_item already exists
+    public void add(int newitem){
+        //Check if newitem already exists
         for (int i : numbers) {
-            if(i==new_item) {
+            if(i==newitem) {
                 System.out.println("New item already exists!");
                 return;
             }
         }
 
         //Check if the current position is still in the array (index too high maybe)
-        if(current_pos>=numbers.length) {
+        if(currentpos>=numbers.length) {
             return;
         }
 
         //If the item pass the previous conditions than it can be added
-        numbers[current_pos]=new_item;
+        numbers[currentpos]=newitem;
 
         //Increase the current position
-        current_pos++;
+        currentpos++;
         return;
     }
 
     public void remove(){
         //Set to 0 the current item
-        numbers[current_pos-1]=0;
+        numbers[currentpos-1]=0;
 
         //Decrease the current position
-        current_pos--;
+        currentpos--;
     }
 
     public String print(){
@@ -51,13 +54,21 @@ public class intSet{
     }
 
     public static void main(String[] args) {
-        intSet firstset= new intSet();
+        intSet firstset= new intSet(5);
+
+        //Add random items
         firstset.add(1);
         firstset.add(2);
         firstset.add(3);
+
+        //Try to remove
         firstset.remove();
         firstset.add(3);
+
+        //Add duplicate
         firstset.add(2);
+
+        //Printout
         System.out.println(firstset.print());
 
     }
