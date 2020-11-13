@@ -1,5 +1,7 @@
 //In this package there are all the files *.java in the folder
 package Datatype;
+//Working with Java class import
+//@author fede2
 
 public class array{
 
