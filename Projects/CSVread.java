@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.util.Arrays;
 
 public class CSVread {
-    private static String path ="C:/Users/fede2/OneDrive/Documenti/GitHub/Java/Java/Projects/data.csv";
+    private static String path ="Projects/data.csv";
     private String[] region;
 
     public String[] dataregion(){
@@ -38,10 +38,5 @@ public class CSVread {
         }
         System.out.println(full);
     }
-
-    public static void main(String[] args) {
-        CSVread data = new CSVread();
-        data.print(data.dataregion());
-
-    }
+    
 }
