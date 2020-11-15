@@ -6,10 +6,11 @@ import java.io.IOException;
 import java.util.Arrays;
 
 public class CSVread {
-    private static String path ="Projects/data.csv";
+    private String path ="";
     private String[] region;
 
-    public String[] dataregion(String path, String dataregion){
+    public CSVread(String path, String dataregion){
+        this.path=path;
         String line = "";
         String splitBy = ",";
         String[] err ={"Error"};
@@ -21,22 +22,29 @@ public class CSVread {
                     region = line.split(splitBy); 
                     if(region[3].contains(dataregion)){
                         region= Arrays.copyOfRange(region, 0, (region.length-1));
-                        return region;
+                        return;
                     }
                 }
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return err;
+        region= err;
     }
 
-    public void print(String[] input){
+    public void print(){
         String full="";
-        for (String str : input) {
+        for (String str : region) {
             full+= str +", ";
         }
         System.out.println(full);
+    }
+
+    public void printuseful(){
+        System.out.println("Dati Bolzano");
+        System.out.println("Incremento positivi: "+ region[12]);
+        System.out.println("Incremento deceduti: " + region[14]);
+
     }
     
 }
