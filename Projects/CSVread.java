@@ -9,7 +9,7 @@ public class CSVread {
     private static String path ="Projects/data.csv";
     private String[] region;
 
-    public String[] dataregion(){
+    public String[] dataregion(String path, String dataregion){
         String line = "";
         String splitBy = ",";
         String[] err ={"Error"};
@@ -19,8 +19,8 @@ public class CSVread {
                 while ((line = br.readLine()) != null) 
                 {
                     region = line.split(splitBy); 
-                    if(region[2].equals("21")){
-                        region= Arrays.copyOfRange(region, 0, (region.length-2));
+                    if(region[3].contains(dataregion)){
+                        region= Arrays.copyOfRange(region, 0, (region.length-1));
                         return region;
                     }
                 }
