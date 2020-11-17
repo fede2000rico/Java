@@ -1,0 +1,2 @@
+INDEX VERSION 1.131+C:\Users\fede2\OneDrive\Documenti\Politecnico di Milano\Sistemi Informatici\Java\.metadata\.plugins\org.eclipse.jdt.core
+712673515.index
