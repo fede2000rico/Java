@@ -1,8 +1,9 @@
 package Lessons.ES6;
 
+//Create a class to handle a music event, with the name of the event and the list of all singers
+
 import java.sql.Date;
 import java.util.ArrayList;
-import java.util.Calendar;
 
 public class mainclass {
     
