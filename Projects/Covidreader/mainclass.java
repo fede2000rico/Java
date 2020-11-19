@@ -1,11 +1,11 @@
-package Projects;
+package Projects.Covidreader;
 
 import java.io.IOException;
 
 public class mainclass {
     // Initial declaration
     public static String fileURL = "https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-regioni/dpc-covid19-ita-regioni-latest.csv";
-    public static String filePATH = "Projects/data.csv";
+    public static String filePATH = "Projects/Covidreader/data.csv";
     public static String region = "Bolzano";
 
     //Include IOException because also download() will include

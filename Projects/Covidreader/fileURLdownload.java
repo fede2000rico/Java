@@ -1,4 +1,4 @@
-package Projects;
+package Projects.Covidreader;
 
 //Imports all libraries
 import java.io.IOException;
